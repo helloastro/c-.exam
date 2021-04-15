@@ -14,6 +14,8 @@ namespace String_adv
             Console.WriteLine(greeting.Substring(0, 4)); // 시작인덱스, 가져올 문자수
             Console.WriteLine(greeting.Substring(4));    // 시작인덱스, 끝까지
             Console.WriteLine();
+            
+            // substring -index 테스트
 
             // split
             string[] strs = greeting.Split(' ');
