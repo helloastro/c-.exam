@@ -2,37 +2,36 @@ using System;
 
 namespace IntegralTypes
 {
-    class MainApp
+    class Program
     {
         static void Main(string[] args)
         {
             sbyte a = -100;
             byte b = 100;
 
-            Console.WriteLine($"a: {a}, b: {b}");
+            Console.WriteLine($"{a}, {b}");
+            Console.WriteLine("Hello world!!");
+            Console.WriteLine(a + ", " + b);
 
             int c = -1000000;
             uint d = 1_000_000;
+            Console.WriteLine($"{c}, {d}");
 
-            Console.WriteLine($"c: {c}, d: {d}");
+            long e = -1000000000;
+            ulong f = 1_000_000_000;
+            Console.WriteLine($"{e}, {f}");
 
-            long e = -100000000;
-            ulong f = 100_000_000;
-
-            Console.WriteLine($"e: {e}, f: {f}");
-
-            /* 보수법 : 음수표현 */ 
-            byte g = 255;        // 1111 1111
-            sbyte h = (sbyte)g;  // 보수법 -1
-
-            Console.WriteLine($"g: {g}, h: {h}");
+            /* 보수법: 음수표현 */
+            byte g = 255; // 1111 1111
+            sbyte h = (sbyte)g;
+            Console.WriteLine($"{g}, {h}");
 
             /* overflow */
             uint i = uint.MaxValue;
-
             i = i + 1;
+            Console.WriteLine(i);
 
-            Console.WriteLine($"i: {i}");
+
         }
     }
 }
