@@ -24,6 +24,8 @@ namespace ConstEnum_Ex
             Console.WriteLine((int)DialogResult2.YES); // 10
             Console.WriteLine((int)DialogResult2.NO); // 11
             Console.WriteLine((int)DialogResult2.CANCEL); // 51
+            
+            /* enum 연산(flg) 테스트 */
 
         }
     }
