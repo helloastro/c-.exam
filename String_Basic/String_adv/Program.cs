@@ -54,6 +54,26 @@ namespace String_adv
 
             // E: 지수
             Console.WriteLine("{0:E}", 123.456789);
+            
+             // 날짜서식
+            DateTime dt = new DateTime(2021, 4, 16, 8, 29, 11);
+            Console.WriteLine("{0:yyyy-MM-dd tt hh:mm:ss (ddd)}", dt);
+            Console.WriteLine("{0:yyyy-MM-dd HH:mm:ss (dddd)}", dt);
+
+            CultureInfo ciKo = new CultureInfo("ko-KR");
+            Console.WriteLine(dt.ToString("yyyy-MM-dd tt hh:mm:ss (ddd)", ciKo));
+
+            CultureInfo ciEn = new CultureInfo("en-US");
+            Console.WriteLine(dt.ToString("yyyy-MM-dd tt hh:mm:ss (ddd)", ciEn));
+            Console.WriteLine();
+
+            // 문자열 보간
+            string name = "홍길동";
+            int age = 23;
+            Console.WriteLine($"{name}, {age}");
+            Console.WriteLine($"{name, 10}, {age:D3}");
+            Console.WriteLine($"{name, -10}, {age, 5:D}");
+            Console.WriteLine($"{name}, {(age>20?"성인":"미성년자")}");           
         }
     }
 }
