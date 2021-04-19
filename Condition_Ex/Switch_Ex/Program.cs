@@ -36,6 +36,38 @@ namespace Switch_Ex
                     Console.WriteLine($"{day}는 요일이 아닙니다.");
                     break;
             }
+            
+            object a = 123;
+
+            switch(a)
+            {
+                case int i:
+                    Console.WriteLine($"{i}는 정수입니다.");
+                    break;
+                case float j:
+                    Console.WriteLine($"{j}는 실수입니다.");
+                    break;
+                default:
+                    Console.WriteLine("정수와 실수가 아닙니다.");
+                    break;
+            }
+
+            a = 123.12f;
+            switch (a)
+            {
+                case int i:
+                    Console.WriteLine($"{i}는 정수입니다.");
+                    break;
+                case float j when j >= 0:
+                    Console.WriteLine($"{j}는 실수이고, 양수입니다.");
+                    break;
+                case float j:
+                    Console.WriteLine($"{j}는 실수입니다.");
+                    break;
+                default:
+                    Console.WriteLine("정수와 실수가 아닙니다.");
+                    break;
+            }
 
             Console.Write("숫자를 입력하세요. :");
             string s = Console.ReadLine();
@@ -82,6 +114,8 @@ namespace Switch_Ex
                     Console.WriteLine($"{o}는 모르는 형식입니다.");
                     break;
             }
+            
+            
         }
     }
 }
