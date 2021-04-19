@@ -9,7 +9,7 @@ namespace Switch_Ex
             Console.Write("요일을 입력하세요. (일, 월, 화, 수, 목, 금, 토) :");
             string day = Console.ReadLine();
 
-            switch(day)
+            switch (day)
             {
                 case "일":
                     Console.WriteLine("Sun");
@@ -37,6 +37,51 @@ namespace Switch_Ex
                     break;
             }
 
+            Console.Write("숫자를 입력하세요. :");
+            string s = Console.ReadLine();
+
+            object o = null;
+            if (int.TryParse(s, out int out_i))
+            {
+                o = out_i;
+            }
+            else if (float.TryParse(s, out float out_f))
+            {
+                o = out_f;
+            }
+            else
+            {
+                o = s;
+            }
+
+            switch(o)
+            {
+                case int i:
+                    Console.WriteLine($"{i}는 int 형입니다.");
+                    break;
+                case float f:
+                    Console.WriteLine($"{f}는 float 형입니다.");
+                    break;
+                default:
+                    Console.WriteLine($"{o}는 모르는 형식입니다.");
+                    break;
+            }
+
+            switch (o)
+            {
+                case int i:
+                    Console.WriteLine($"{i}는 int 형입니다.");
+                    break;
+                case float f when f >= 0:
+                    Console.WriteLine($"{f}는 float 형이고 양수입니다.");
+                    break;
+                case float f:
+                    Console.WriteLine($"{f}는 float 형입니다.");
+                    break;
+                default:
+                    Console.WriteLine($"{o}는 모르는 형식입니다.");
+                    break;
+            }
         }
     }
 }
