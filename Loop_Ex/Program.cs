@@ -44,6 +44,14 @@ namespace Loop_Ex
                 Console.WriteLine(a);
             }
 
+            List<int> arr = new List<int>() { 0, 1, 2, 3, 4, 5 };
+            foreach(int a in arr)
+            {
+                Console.WriteLine(a);
+            }
+
+            arr.ForEach(x => Console.WriteLine(x));
+            
             while(true)
             {
                 Console.Write("계속할까요?(y/n):");
