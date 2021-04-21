@@ -9,6 +9,7 @@ namespace Class_Ex
         public string Name;
         public string Color;
 
+        // 기본 생성자
         public Cat()
         {
             this.Name = "";
@@ -16,6 +17,7 @@ namespace Class_Ex
             ++count;
         }
 
+        // 생성자 오버로딩
         public Cat(String _name, String _color)
         {
             this.Name = _name;
@@ -73,7 +75,7 @@ namespace Class_Ex
             nero.Color = "검은색";
             nero.Meow();
 
-            Cat kitty2 = new Cat("키티2", "햐얀색");
+            Cat kitty2 = new Cat(_name:"키티2", "하얀색");
             kitty2.Meow();
             Console.WriteLine($"{kitty2.Name}, {kitty2.Color}");
 
