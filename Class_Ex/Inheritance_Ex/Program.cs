@@ -76,7 +76,7 @@ namespace Inheritance_Ex
     
     class Program
     {
-        static void Method(Base _base)
+        static void Method(Base _base)  // overloading 최소화
         {
             _base.Method2();
         }
@@ -90,7 +90,10 @@ namespace Inheritance_Ex
             Child2 child2 = new Child2();
             child2.ChildMethod();
             child2.Method();
+            
+            // method override
             child2.Method2();
+            child.Method2();
 
             //class 데이터타입
             Base child3 = new Child2();
@@ -100,10 +103,8 @@ namespace Inheritance_Ex
             ((Child2)child3).ChildMethod();
             ((Child2)child3).Method();
 
-
-            Method(child2);
             Method(child);
-
+            Method(child2);
         }
     }
 }
