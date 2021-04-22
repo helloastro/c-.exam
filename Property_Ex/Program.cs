@@ -64,6 +64,11 @@ namespace Property_Ex
 
     class Program
     {
+        static void Display(dynamic pr)
+        {
+            Console.WriteLine($"성명: {pr.Name}, 키: {pr.Height}");
+        }
+        
         static void Main(string[] args)
         {
             Profile profile = new Profile();
@@ -89,6 +94,9 @@ namespace Property_Ex
             }
 
             Console.WriteLine();
+            
+            //무명 프로퍼티
+            Display(new { Name = "홍길동", Height = 180 });
         }
     }
 }
