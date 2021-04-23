@@ -54,10 +54,10 @@ namespace ArrayCollection_Ex
             }
 
             List<int> list1 = new List<int>();
-            list.Add(1);
-            list.Add(2);
-            list.Insert(1, 3);
-            list.RemoveAt(0);
+            list1.Add(1);
+            list1.Add(2);
+            list1.Insert(1, 3);
+            list1.RemoveAt(0);
 
             list1.ForEach(x => Console.WriteLine(x));
 
