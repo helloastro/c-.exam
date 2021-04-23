@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace DelegateLamda_Ex
 {
+    // 메서드는 클래스안에서만 생성할 수 있기 때문에 클래스를 설계한다.
     class Calc
     {
         public int Plus(int a, int b) { return a + b; }
@@ -26,7 +27,8 @@ namespace DelegateLamda_Ex
             Console.WriteLine(deli(3, 4));
 
             Console.WriteLine();
-
+            
+            // 메서드 체이닝
             Deli cal = new Deli(calc.Plus);
             cal += new Deli(calc.Minus);
             Console.WriteLine(cal(3, 4));
@@ -34,6 +36,7 @@ namespace DelegateLamda_Ex
             cal -= new Deli(calc.Minus);
             Console.WriteLine(cal(3, 4));
 
+            // 무명 메서드
             Deli plus = delegate (int a, int b)
             {
                 return a + b;
