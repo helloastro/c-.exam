@@ -31,13 +31,13 @@ namespace ArrayCollection_Ex
             Array.ForEach<int>(scores[..3], x => Console.WriteLine(x));
             Array.ForEach<int>(scores[2..], x => Console.WriteLine(x));
 
-            ArrayList list = new ArrayList();
+            ArrayList list = new ArrayList();  // Object 형으로 저장된다.
             list.Add(1);
             list.Add(2);
             list.Insert(1, 3);
             list.RemoveAt(0);
 
-            for(int i=0, len=list.Count; i < len; i++)
+            for(int i=0, len=list.Count; i < len; i++)  // Object형의 Unboxing을 피하기 위해 일반 for를 이용한다.
             {
                 Console.WriteLine(list[i]);
             }
